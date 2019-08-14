@@ -46,7 +46,15 @@ Route::get('add-to-cart/{id}', 'ProductsController@addToCart');
 Route::patch('update-cart', 'ProductsController@updateCart');
 Route::delete('remove-from-cart', 'ProductsController@removeCart');
 
-
+/**
+*Confirm order form Route(s)
+*/
+Route::get('/confirm', 'ConfirmController@confirm');
+//Route::post('/confirm', 'ConfirmController@store');
 
 Route::resource('products', 'ProductsController');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

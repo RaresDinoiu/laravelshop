@@ -18,6 +18,7 @@
 </head>
 <body>
 
+<link rel="stylesheet" type="text/css" href="{{ url('/css/style.css') }}" />
 <div class="container">
     @include('layouts.navbar')
     <div class="row">
