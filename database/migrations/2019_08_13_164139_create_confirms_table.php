@@ -16,10 +16,10 @@ class CreateConfirmsTable extends Migration
         Schema::create('confirms', function (Blueprint $table) {
            $table->increments('id');
            $table->string('name');
-           $table->string('company');
-           $table->longText('description');
-           $table->float('amount');
-           $table->boolean('available');
+           $table->longText('adress');
+           $table->string('email');
+           $table->string('phone');
+           $table->longText('comment');
            $table->timestamps();
         });
     }

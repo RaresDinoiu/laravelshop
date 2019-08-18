@@ -19,7 +19,7 @@
                             <img src="{{ url('/') }}/images/{{ $product->photo }}" style="max-width: 250px;max-height: 250px">
 
                         @else
-                            <img src="{{ $product->photo }}" style="max-width: 250px;max-height: 250px">
+                            <img src="/images/{{ $product->photo }}" style="max-width: 250px;max-height: 250px">
                         @endif
                         <div class="caption">
                             <h4>{{ $product->name }}</h4>

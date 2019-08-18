@@ -5,7 +5,7 @@
 
 @section('content')
 
-    <table id="cart" class="table table-hover table-condensed">
+    <table id="cart" class="table table-hover table-condensed" style="background-color: white; opacity: 0.8;" >
         <thead>
         <tr>
             <th style="width:50%">Product</th>
@@ -27,7 +27,7 @@
                 <tr>
                     <td data-th="Product">
                         <div class="row">
-                            <div class="col-sm-3 hidden-xs"><img src="{{ $details['photo'] }}" width="100" height="100" class="img-responsive"/></div>
+                            <div class="col-sm-3 hidden-xs"><img src="images/{{ $details['photo'] }}" width="100" height="100" class="img-responsive"/></div>
                             <div class="col-sm-9">
                                 <h4 class="nomargin">{{ $details['name'] }}</h4>
                             </div>
@@ -52,7 +52,7 @@
             <td class="text-center"><strong>Total {{ $total }}</strong></td>
         </tr>
         <tr>
-            <td><a href="{{ url('/products/listProducts') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+            <td><a href="{{ url('/listProducts') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
 
             <td colspan="2" class="hidden-xs"></td>
             <td class="hidden-xs text-center"><strong>Total ${{ $total }}</strong></td>

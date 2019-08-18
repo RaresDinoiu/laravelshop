@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Confirm;
 
 class ConfirmController extends Controller
 {
@@ -27,7 +28,7 @@ class ConfirmController extends Controller
 
        $validatedData = $request->validate([
            'name' => 'required|unique:products',
-           'address' => 'required',
+           'adress' => 'required',
            'email' => 'required',
            'phone' => 'required|numeric',
            'comment' => '',
@@ -35,7 +36,7 @@ class ConfirmController extends Controller
 
        Confirm::create($request->all());
 
-       return redirect('/productsList');
+       return redirect('/listProducts');
 
    }
 }

@@ -40,7 +40,7 @@ Route::get('email/verify', 'Auth\VerificationController@show')->name('verificati
 Route::get('email/verify/{id}', 'Auth\VerificationController@verify')->name('verification.verify');
 Route::get('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
 
-Route::get('/products/listProducts', 'ProductsController@listProducts');
+Route::get('/listProducts', 'ProductsController@listProducts');
 Route::get('cart', 'ProductsController@cart');
 Route::get('add-to-cart/{id}', 'ProductsController@addToCart');
 Route::patch('update-cart', 'ProductsController@updateCart');
@@ -50,10 +50,10 @@ Route::delete('remove-from-cart', 'ProductsController@removeCart');
 *Confirm order form Route(s)
 */
 Route::get('/confirm', 'ConfirmController@confirm');
-//Route::post('/confirm', 'ConfirmController@store');
+Route::post('/confirm', 'ConfirmController@store');
 
 Route::resource('products', 'ProductsController');
-
+Route::get('/success');
 
 Auth::routes();
 

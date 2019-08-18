@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/products/listProducts') }}" style="color:white;">3D Printed Glasses
+        <a class="navbar-brand" href="{{ url('/listProducts') }}" style="color:white;">3D Printed Glasses
           <!--  {{ config('app.name', 'Laravel') }} remember to check this -->
 
         </a>
